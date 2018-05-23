@@ -60,7 +60,6 @@ exports.handle = async (data, ctx) => {
   const spellIdString =
     get(data, ['queryStringParameters', 'spellId']) ||
     get(data, ['pathParameters', 'spellId']);
-  console.log(spellIdString);
   const spellId = Number(spellIdString);
   if (!spellId) {
     throw new Error(`Invalid spell ID: ${spellId}`);
