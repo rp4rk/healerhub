@@ -1,10 +1,10 @@
 <template>
-  <div v-if="this.currentSpell" class="talent">
+  <div class="talent">
     <header>
       <div class="background-image" :style="{ 'background-image': 'url(' + this.getImageURI() + ')'} "></div>
+      <div class="loader" v-bind:class="{ loading: isLoading }" :style="{ 'background-image': 'url(' + this.loadingImage + ')'} "></div>
 
-
-      <span class="spell-name">{{ this.currentSpell.Name }}</span>
+      <span class="spell-name">{{ this.currentSpell.Name || 'Loading...' }}</span>
     </header>
     <main v-if="this.showDescription">
       {{ this.currentSpell.AuraDescriptionParsed }}
@@ -19,6 +19,7 @@
   import axios from 'axios';
   import { API_URL, IMAGE_URL } from './util/constants';
   import { toSeconds } from './util/time';
+  import loadingImage from '../public/img/question-mark.jpg';
 
   export default {
     props: ['id', 'showDescription', 'showMetadata'],
@@ -32,7 +33,7 @@
         return toSeconds(this.currentSpell.CastingTimeMs);
       },
       getImageURI() {
-        return IMAGE_URL(this.currentSpell.Icon);
+        return (this.currentSpell.Icon && IMAGE_URL(this.currentSpell.Icon));
       },
       fetchSpellData() {
         this.isLoading = true;
@@ -41,6 +42,7 @@
           .then(({data}) => {
             this.spells = this.spells.concat(data);
             this.currentSpell = this.spells[0];
+            this.isLoading = false;
           })
           .catch(err => this.isLoading = false);
       },
@@ -48,12 +50,10 @@
 
     data() {
       return {
-        currentSpell: null,
+        currentSpell: false,
         isLoading: false,
         spells: [],
-        id: this.id,
-        showDescription: this.showDescription,
-        showMetadata: this.showMetadata,
+        loadingImage,
       };
     },
   }
@@ -67,12 +67,8 @@
 
     border: 1px solid #ddd;
     min-width: 20%;
+    min-height: 44px;
     width: calc(33% - 15px);
-
-    display: inline-flex;
-    flex-direction: column;
-    flex-grow: 0;
-    justify-content: space-between;
 
     margin-right: 15px;
   }
@@ -98,6 +94,24 @@
 
     filter: blur(5px) opacity(0.8);
     transition: filter 0.1s ease-in-out;
+  }
+
+  .loader {
+    transition: opacity 0.8s ease-out;
+    opacity: 0;
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+  }
+
+  .loader.loading {
+    opacity: 1;
   }
 
   .talent:hover .background-image {
