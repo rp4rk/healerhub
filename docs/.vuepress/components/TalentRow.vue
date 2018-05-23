@@ -16,20 +16,8 @@
 </template>
 
 <script>
-import CheckIcon from "vue-material-design-icons/check-circle-outline.vue";
-import AlertOutline from "vue-material-design-icons/alert-circle-outline.vue";
-
 export default {
   props: ['ids', 'tier', 'correctPicks', 'showPickIcon', 'reverse'],
-
-  components: {
-    CheckIcon,
-    AlertOutline,
-  },
-
-  data() {
-    return {};
-  },
 };
 </script>
 
