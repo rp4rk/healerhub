@@ -50,7 +50,11 @@ const baseDBParams = {
 };
 
 exports.handle = async (data, ctx) => {
-  const spellId = Number(data.queryStringParameters.spellId);
+  const spellIdString =
+    get(data, ['queryStringParameters', 'spellId']) ||
+    get(data, ['pathParameters', 'spellId']);
+  console.log(spellIdString);
+  const spellId = Number(spellIdString);
   if (!spellId) {
     throw new Error(`Invalid spell ID: ${spellId}`);
   }
@@ -64,7 +68,7 @@ exports.handle = async (data, ctx) => {
       ':ID': spellId,
     },
     ScanIndexForward: false,
-    Limit: data.queryStringParameters.limit || 5,
+    Limit: get(data, ['queryStringParameters', 'limit']) || 5,
   };
 
   // Get build and spells
