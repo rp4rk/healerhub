@@ -1,12 +1,12 @@
 <template>
-  <div class="talent">
+  <div class="talent" @click="toggleDescription" v-bind:class="{ unfocused: !mutableShowDescription }">
     <header>
       <div class="background-image" :style="{ 'background-image': 'url(' + this.getImageURI() + ')'} "></div>
       <div class="loader" v-bind:class="{ loading: isLoading }" :style="{ 'background-image': 'url(' + this.loadingImage + ')'} "></div>
 
       <span class="spell-name">{{ this.currentSpell.Name || '' }}</span>
     </header>
-    <main v-if="this.showDescription">
+    <main v-if="this.mutableShowDescription">
       {{ this.currentSpell.AuraDescriptionParsed }}
     </main>
     <footer class="spell-details" v-if="this.showMetadata">
@@ -38,12 +38,19 @@ export default {
       };
     },
   },
-  
+
+  methods: {
+    toggleDescription() {
+      this.mutableShowDescription = !this.mutableShowDescription;
+    },
+  },
+
   data() {
     return {
       loadingImage,
-    }
-  }
+      mutableShowDescription: this.showDescription,
+    };
+  },
 };
 </script>
 
@@ -59,6 +66,16 @@ export default {
 
   margin-right: 15px;
   margin-top: 5px;
+  transition: filter 0.5s ease-in-out;
+
+}
+
+.unfocused {
+  filter: saturate(0.1);
+}
+
+.unfocused:hover {
+  filter: saturate(0.6);
 }
 
 .talent:hover {
@@ -81,7 +98,7 @@ export default {
   background-size: cover;
 
   filter: blur(5px) opacity(0.8);
-  transition: filter 0.1s ease-in-out;
+  transition: filter 0.5s ease-in-out;
 }
 
 .loader {
