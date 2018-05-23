@@ -71,11 +71,11 @@ export default {
 }
 
 .unfocused {
-  filter: saturate(0.1);
+  filter: saturate(0.1) opacity(0.2);
 }
 
 .unfocused:hover {
-  filter: saturate(0.6);
+  filter: saturate(0.6) opacity(0.8);
 }
 
 .talent:hover {
@@ -97,7 +97,7 @@ export default {
   z-index: -1;
   background-size: cover;
 
-  filter: blur(5px) opacity(0.8);
+  filter: blur(5px) opacity(0.8) saturate(0.5);
   transition: filter 0.5s ease-in-out;
 }
 
@@ -121,7 +121,7 @@ export default {
 }
 
 .talent:hover .background-image {
-  filter: blur(10px) opacity(0.95);
+  filter: blur(10px) opacity(0.95) saturate(0.5);
 }
 
 .talent header {

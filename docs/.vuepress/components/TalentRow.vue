@@ -5,11 +5,11 @@
       <h3 class="talent-row-tier">{{this.tier}}</h3>
     </div>
     <div class="talent-row-spells">
-      <div v-for="(id, idx) in this.ids" class='talent-row-member'>
+      <div v-bind:class="{ reverse: reverse }" v-for="(id, idx) in this.ids" class='talent-row-member'>
         
         <Talent :id=id :showDescription=correctPicks[idx]></Talent>
-        <CheckIcon v-if="correctPicks[idx] && showPickIcon" fillColor='#3eaf7c'></CheckIcon>
-        <AlertOutline v-if="!correctPicks[idx] && showPickIcon" fillColor='#c54732'></AlertOutline>
+        <CheckCircle v-if="correctPicks[idx] && showPickIcon" fillColor='#3eaf7c'></CheckCircle>
+        <AlertCircle v-if="!correctPicks[idx] && showPickIcon" fillColor='#c54732'></AlertCircle>
       </div>
     </div>
   </div>
@@ -67,6 +67,14 @@ export default {
 
   .talent-row-member > *:not(:first-child) {
     margin-left: 15px;
+  }
+
+  .reverse.talent-row-member > *:not(:first-child) {
+    margin: 0;
+  }
+
+  .reverse.talent-row-member > *:last-child {
+    margin: 0 15px 0 0;
   }
 
   .talent-row-member > .talent {

@@ -11,7 +11,7 @@ some recommendations on which abilities to choose.
 
 ## Talent Recommendations
 
-<TalentRow :tier=15 :ids="[193134, 265259, 214621]" :correctPicks="[0, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=15 :ids="[193134, 265259, 214621]" :correctPicks="[0, 1, 1]"></TalentRow>
 
 <hr />
 
@@ -29,7 +29,7 @@ where Contrition is strong, but Twist of Fate won't proc.
 
 <hr />
 
-<TalentRow :tier=30 :ids="[121536, 64129, 193063]" :correctPicks="[1, 0, 0]" :reverse=true></TalentRow>
+<TalentRow :showPickIcon=true :tier=30 :ids="[121536, 64129, 193063]" :correctPicks="[1, 0, 0]" :reverse=true></TalentRow>
 
 <hr />
 
@@ -51,7 +51,7 @@ cast the Angelic Feather on you!
 
 <hr />
 
-<TalentRow :tier=45 :ids="[129250, 197045, 123040]" :correctPicks="[1, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=45 :ids="[129250, 197045, 123040]" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
 
@@ -70,7 +70,7 @@ healing in minute intervals, meaning mana expenditure between ramps will not be 
 
 <hr />
 
-<TalentRow :tier=60 :ids="[196704, 204263, 205367]" :correctPicks="[0, 1, 0]" reverse=true></TalentRow>
+<TalentRow :showPickIcon=true :tier=60 :ids="[196704, 204263, 205367]" :correctPicks="[0, 1, 0]" reverse=true></TalentRow>
 
 <hr />
 
@@ -78,7 +78,7 @@ When was the last time you cast Psychic Scream or Mind Control? Thought so - tak
 
 <hr />
 
-<TalentRow :tier=75 :ids="[238063, 271531, 197419]" :correctPicks="[1, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=75 :ids="[238063, 271531, 197419]" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
 
@@ -104,7 +104,7 @@ and the group at the same time is amazingly strong in the right conditions.
 
 <hr />
 
-<TalentRow :tier=90 :ids="[204197, 110744, 120517]" :correctPicks="[1, 1, 1]" reverse=true></TalentRow>
+<TalentRow :showPickIcon=true :tier=90 :ids="[204197, 110744, 120517]" :correctPicks="[1, 1, 1]" reverse=true></TalentRow>
 
 <hr />
 
@@ -120,7 +120,7 @@ also does a huge amount of raw healing that *is* buffed by Reverence.
 
 <hr />
 
-<TalentRow :tier=100 :ids="[271466, 200309, 246287]" :correctPicks="[1, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=100 :ids="[271466, 200309, 246287]" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
 
