@@ -35,6 +35,13 @@ const buildResponse = (statusCode, items) => ({
   statusCode,
   body: JSON.stringify(items),
   isBase64Encoded: false,
+  headers: {
+    'X-Requested-With': '*',
+    'Access-Control-Allow-Headers':
+      'Content-Type,X-Amz-Date,Authorization,X-Api-Key,x-requested-with',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,OPTIONS',
+  },
 });
 
 // Set up SSM
