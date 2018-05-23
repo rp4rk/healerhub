@@ -1,6 +1,6 @@
 <template>
-  <div class="talent-row">
-    <div class="talent-row-tier-container">
+  <div class="talent-row" v-bind:class="{ reverse: reverse }">
+    <div class="talent-row-tier-container" >
       <h3 class="tier-label">TIER</h3>
       <h3 class="talent-row-tier">{{this.tier}}</h3>
     </div>
@@ -20,7 +20,7 @@ import CheckIcon from "vue-material-design-icons/check-circle-outline.vue";
 import AlertOutline from "vue-material-design-icons/alert-circle-outline.vue";
 
 export default {
-  props: ['ids', 'tier', 'correctPicks', 'showPickIcon'],
+  props: ['ids', 'tier', 'correctPicks', 'showPickIcon', 'reverse'],
 
   components: {
     CheckIcon,
@@ -35,8 +35,13 @@ export default {
 
 <style>
   .talent-row {
+    margin: 30px 0;
     display: flex;
     align-items: center;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
   }
 
   .talent-row-tier-container {
