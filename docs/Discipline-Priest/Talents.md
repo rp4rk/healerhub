@@ -128,7 +128,9 @@ Luminous Barrier replaces Power Word: Barrier, but gives you a massive absorb sh
 able to squeeze more value out of having Barrier and Evangelism. Taking this in anything other than a raid is a mistake. If
 you cannot make Power Word: Barrier work, or you have trouble utilising it, Luminous Barrier may be a good pick.
 
-Grace is good for dungeons and maybe some fights where spot healing is at a premium. Not that **grace does not buff Contrition!**
+Grace is good for dungeons and maybe some fights where spot healing is at a premium. Note that **grace does not buff Contrition!**
 
 Evangelism is a standard pick, the ability to extend your Atonements and cast more of your cooldowns into them counters
 a lot of intense healing phases. This cooldown is a little weaker now that we no longer have access to Velen's.
+
+<QuickRead></QuickRead>
