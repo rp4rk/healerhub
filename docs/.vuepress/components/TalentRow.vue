@@ -7,9 +7,9 @@
     <div class="talent-row-spells">
       <div v-bind:class="{ reverse: reverse }" v-for="(id, idx) in this.ids" class='talent-row-member'>
         
-        <Talent :id=id :showDescription=correctPicks[idx]></Talent>
-        <CheckCircle v-if="correctPicks[idx] && showPickIcon" fillColor='#3eaf7c'></CheckCircle>
-        <AlertCircle v-if="!correctPicks[idx] && showPickIcon" fillColor='#c54732'></AlertCircle>
+        <Talent :id=id :showDescription="correctPicks && correctPicks[idx] || !correctPicks"></Talent>
+        <CheckCircle v-if="correctPicks && correctPicks[idx] && showPickIcon" fillColor='#3eaf7c'></CheckCircle>
+        <AlertCircle v-if="correctPicks && !correctPicks[idx] && showPickIcon" fillColor='#c54732'></AlertCircle>
       </div>
     </div>
   </div>

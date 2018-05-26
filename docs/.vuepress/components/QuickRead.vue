@@ -1,35 +1,32 @@
 <template>
-  <div @click="setQuickReadLevel" class="quick-read">
-    {{ this.prompt }}
+  <div class="quick-read">
+    Level of detail:
+    <select v-model="currentQuickReadLevel" @change="setQuickReadLevel(currentQuickReadLevel)">
+      <option v-for="option in this.quickReadOptions">{{option}}</option>
+    </select>
   </div>
 </template>
 
 <script>
-import quickRead from './util/quickRead';
-
-const QUICK_READ_PROMPTS = [
-  'HealerHub Picture Book Mode',
-  'Toggle Casual',
-  'Ook ook',
-  '"Healers shouldn\'t DPS"',
-];
+import quickRead from './store/quickRead';
 
 export default {
   computed: {
-    prompt() {
-      return QUICK_READ_PROMPTS[
-        Math.floor(Math.random() * QUICK_READ_PROMPTS.length)
-      ];
+    quickReadOptions() {
+      return quickRead.getQuickReadLevels();
     },
   },
 
   methods: {
-    setQuickReadLevel: () => {
-      console.log(
-        `Current quickRead level is ${quickRead.getQuickReadLevel()}`
-      );
-      quickRead.setQuickReadLevel('Expert');
+    setQuickReadLevel: option => {
+      quickRead.setQuickReadLevel(option);
     },
+  },
+
+  data() {
+    return {
+      currentQuickReadLevel: quickRead.getQuickReadLevel(),
+    };
   },
 };
 </script>
