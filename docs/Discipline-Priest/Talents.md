@@ -15,6 +15,8 @@ some recommendations on which abilities to choose.
 
 <hr />
 
+<SkillSpan level="normal">
+
 Twist of Fate and Schism are very strong choices, Twist of Fate being the choice for Mythic
 raiders in Legion for progress environments may not repeat itself due to the increased breakdown
 of absorbs in Battle for Azeroth.
@@ -29,9 +31,14 @@ where Contrition is strong, but Twist of Fate won't proc.
 
 <hr />
 
+</SkillSpan>
+
+
 <TalentRow :showPickIcon=true :tier=30 :ids="[121536, 64129, 193063]" :correctPicks="[1, 0, 0]" :reverse=true></TalentRow>
 
 <hr />
+
+<SkillSpan level="normal">
 
 Angelic Feather is realistically the only ability you will take here, the mobility is amazing on a
 specialisation that is very slow otherwise. Masochism may see niche use on fights where Desperate
@@ -51,9 +58,13 @@ cast the Angelic Feather on you!
 
 <hr />
 
+</SkillSpan>
+
 <TalentRow :showPickIcon=true :tier=45 :ids="[129250, 197045, 123040]" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
+
+<SkillSpan level="normal">
 
 Power Word: Solace strikes a nice balance between it's peers, not the best for mana return and not
 the best for burst DPS. It's available for some strong synergy with Schism as the cooldown is half that
@@ -70,17 +81,25 @@ healing in minute intervals, meaning mana expenditure between ramps will not be 
 
 <hr />
 
+</SkillSpan>
+
 <TalentRow :showPickIcon=true :tier=60 :ids="[196704, 204263, 205367]" :correctPicks="[0, 1, 0]" reverse=true></TalentRow>
 
 <hr />
+
+<SkillSpan level="normal">
 
 When was the last time you cast Psychic Scream or Mind Control? Thought so - take Shining Force.
 
 <hr />
 
+</SkillSpan>
+
 <TalentRow :showPickIcon=true :tier=75 :ids="[238063, 271531, 197419]" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
+
+<SkillSpan level="normal">
 
 Lenience is as always, a huge amount of mitigation for your raid. This talent is strong, however if you are
 having trouble judging how strong, remember that [WoWAnalyzer](www.wowanalyzer.com) can tell you how much
@@ -104,9 +123,13 @@ and the group at the same time is amazingly strong in the right conditions.
 
 <hr />
 
+</SkillSpan>
+
 <TalentRow :showPickIcon=true :tier=90 :ids="[204197, 110744, 120517]" :correctPicks="[1, 1, 1]" reverse=true></TalentRow>
 
 <hr />
+
+<SkillSpan level="normal">
 
 Purge the Wicked is still very strong, but no longer reigns as king in situations where you cannot benefit from the spread.
 If you can reliably spread this, it contains an amazing amount of value that will be hard for Divine Star or Halo to beat.
@@ -120,15 +143,23 @@ also does a huge amount of raw healing that *is* buffed by Reverence.
 
 <hr />
 
+</SkillSpan>
+
 <TalentRow :showPickIcon=true :tier=100 :ids="[271466, 200309, 246287]" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
+
+<SkillSpan level="normal">
 
 Luminous Barrier replaces Power Word: Barrier, but gives you a massive absorb shield instead. This seems good but you will be
 able to squeeze more value out of having Barrier and Evangelism. Taking this in anything other than a raid is a mistake. If
 you cannot make Power Word: Barrier work, or you have trouble utilising it, Luminous Barrier may be a good pick.
 
-Grace is good for dungeons and maybe some fights where spot healing is at a premium. Not that **grace does not buff Contrition!**
+Grace is good for dungeons and maybe some fights where spot healing is at a premium. Note that **grace does not buff Contrition!**
 
 Evangelism is a standard pick, the ability to extend your Atonements and cast more of your cooldowns into them counters
 a lot of intense healing phases. This cooldown is a little weaker now that we no longer have access to Velen's.
+
+</SkillSpan>
+
+<QuickRead></QuickRead>
