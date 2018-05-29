@@ -1,9 +1,10 @@
 <template>
   <span @mouseout="toggleTooltip(false)" @mouseover="toggleTooltip(true)" class="spell-inline">
+    <Loader :hideText=true :isLoading="isLoading" size="12px"></Loader>
     <img class="spell-inline-image" :src="this.getImageURI()" />
-    {{ this.currentSpell.Name || 'Loading...' }}
+    {{ this.currentSpell.Name }}
 
-    <div v-show="this.showTooltip" class="spell-tooltip">
+    <div v-if="!isLoading" v-show="this.showTooltip" class="spell-tooltip">
       {{ this.currentSpell.AuraDescriptionParsed }}
 
       <footer class='spell-tooltip-metadata'>
@@ -61,6 +62,8 @@ export default {
   border-radius: 3px;
   padding-right: 8px;
   font-weight: 500;
+
+  min-width: 80px;
 }
 
 .spell-inline:hover {
