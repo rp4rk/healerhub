@@ -1,0 +1,22 @@
+{
+  "name": "healerhub",
+  "version": "1.0.0",
+  "description": "Healer documentation",
+  "main": "index.js",
+  "author": "Ryan Park <admin@ryanpark.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "api:testwrite": "echo '{ \"spellId\": 585, \"limit\": 2 }' | apex invoke fetchSpell | jq '.'"
+  },
+  "devDependencies": {
+    "vuepress": "^0.8.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "store2": "^2.7.0",
+    "vue-material-design-icons": "^1.4.0",
+    "vue-spinner": "^1.0.3"
+  }
+}

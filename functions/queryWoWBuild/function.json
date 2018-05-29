@@ -1,0 +1,9 @@
+{
+  "name": "setWoWBuild",
+  "description": "Fetches a spell from our cache",
+  "runtime": "nodejs8.10",
+  "memory": 128,
+  "timeout": 5,
+  "region": "eu-west-1",
+  "role": "arn:aws:iam::684913067277:role/healerhubLambda"
+}

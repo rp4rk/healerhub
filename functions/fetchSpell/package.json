@@ -1,0 +1,11 @@
+{
+  "name": "fetchSpell",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.244.1",
+    "axios": "^0.18.0",
+    "html-to-text": "^4.0.0"
+  }
+}
