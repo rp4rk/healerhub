@@ -7,8 +7,8 @@ module.exports = {
       {
         title: 'Discipline Priest',
         children: [
-          '/Discipline-Priest/',
-          '/Discipline-Priest/Talents'
+          '/discipline-priest/',
+          '/discipline-priest/talents'
         ]
       },
     ]
