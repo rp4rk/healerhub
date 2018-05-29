@@ -1,4 +1,4 @@
-import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue';
+import ScaleLoader from '../../node_modules/vue-spinner/src/ScaleLoader.vue';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
