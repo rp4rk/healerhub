@@ -9,6 +9,8 @@ Discipline has a lot of versatile choices in Battle for Azeroth, a retuning of t
 has left us in a very strong position to choose based on the situation. Below you can find
 some recommendations on which abilities to choose.
 
+<Spell id=214621></Spell> is a very strong choice, enabling you to choose when you want to benefit from this tier's bonus. As Discipline can still pull off very strong burst, this is very advantageous.
+
 ## Talent Recommendations
 
 <TalentRow :showPickIcon=true :tier=15 :ids="[193134, 265259, 214621]" :correctPicks="[0, 1, 1]"></TalentRow>

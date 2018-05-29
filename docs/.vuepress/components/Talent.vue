@@ -1,9 +1,8 @@
 <template>
   <div class="talent" @click="toggleDescription" v-bind:class="{ unfocused: !mutableShowDescription }">
-    <header>
+    <Loader :isLoading="isLoading"></Loader>
+    <header v-if="!isLoading">
       <div class="background-image" :style="{ 'background-image': 'url(' + this.getImageURI() + ')'} "></div>
-      <div class="loader" v-bind:class="{ loading: isLoading }" :style="{ 'background-image': 'url(' + this.loadingImage + ')'} "></div>
-
       <span class="spell-name">{{ this.currentSpell.Name || '' }}</span>
     </header>
     <main v-if="this.mutableShowDescription">
@@ -15,10 +14,13 @@
         {{ this.currentSpell.Range.MaxEnemies }} yard range
       </span>
     </footer>
+    <div class="loading-image" v-bind:class="{ loading: isLoading }" :style="{ 'background-image': 'url(' + this.loadingImage + ')'} "></div>
+
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 import SpellComponent from './SpellComponent';
 import loadingImage from '../public/img/question-mark.jpg';
 
@@ -56,6 +58,7 @@ export default {
 
 <style>
 .talent {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   overflow: hidden;
@@ -78,6 +81,26 @@ export default {
   filter: saturate(0.6) opacity(0.8);
 }
 
+.loading-image {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  filter: blur(10px);
+}
+
+.loading-image.loading {
+  opacity: 1;
+}
+
+
 .talent:hover {
   cursor: pointer;
 }
@@ -99,25 +122,6 @@ export default {
 
   filter: blur(5px) opacity(0.8) saturate(0.5);
   transition: filter 0.5s ease-in-out;
-}
-
-.loader {
-  transition: opacity 0.8s ease-out;
-  opacity: 0;
-
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-size: cover;
-  filter: blur(10px);
-}
-
-.loader.loading {
-  opacity: 1;
 }
 
 .talent:hover .background-image {
