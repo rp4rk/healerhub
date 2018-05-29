@@ -28,7 +28,7 @@ export default {
         .get(`${API_URL}/${this.id}`)
         .then(({ data }) => {
           this.spells = this.spells.concat(data);
-          this.currentSpell = this.spells[0];
+          this.currentSpell = this.spells[this.spells.length - 1];
           this.isLoading = false;
         })
         .catch(err => (this.isLoading = false));
