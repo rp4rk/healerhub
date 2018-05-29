@@ -24,7 +24,7 @@ export default {
   align-items: center;
 
   background-color: white;
-  z-index: 100;
+  z-index: 10;
 }
 
 .loader-wrapper {

@@ -1,6 +1,5 @@
 ---
 home: true
-heroImage: /hero.png
 actionText: Choose your Healer →
 actionLink: /choose-your-healer
 features:
