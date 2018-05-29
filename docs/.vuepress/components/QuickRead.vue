@@ -1,6 +1,6 @@
 <template>
   <div class="quick-read">
-    Level of detail:
+    <div class="quick-read-header">Level of detail</div>
     <select v-model="currentQuickReadLevel" @change="setQuickReadLevel(currentQuickReadLevel)">
       <option v-for="option in this.quickReadOptions">{{option}}</option>
     </select>
@@ -39,5 +39,17 @@ export default {
   right: 20px;
   display: block;
   z-index: 1000;
+
+  background-color: #3eaf7c;
+  border-radius: 3px;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+
+  box-shadow: 0 1px 5px rgba(0,0,0, 0.2);
+}
+
+.quick-read-header {
+  padding-bottom: 10px;
 }
 </style>
