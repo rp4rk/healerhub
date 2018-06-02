@@ -132,6 +132,7 @@ export default {
   display: flex;
   align-items: flex-start;
   position: relative;
+  overflow: hidden;
 }
 
 .talent .icon {
@@ -154,9 +155,8 @@ export default {
 }
 
 .talent main {
-  background-color: var(--main-bg-color);
+  background-color:rgba(255,255,255, 0.02);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 
   font-size: 0.8rem;
   font-style: italic;
