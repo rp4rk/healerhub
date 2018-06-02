@@ -81,7 +81,7 @@ export default {
 }
 
 .spell-tooltip {
-  background-color: white;
+  background-color: var(--main-bg-color);
   border: 1px solid rgba(0,0,0, 0.2);
   padding: 5px;
 
