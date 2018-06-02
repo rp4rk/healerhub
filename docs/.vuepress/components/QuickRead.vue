@@ -40,13 +40,12 @@ export default {
   display: block;
   z-index: 1000;
 
-  background-color: #3eaf7c;
-  border-radius: 3px;
+  background-color: var(--main-bg-color);
   padding: 10px;
   color: white;
   font-weight: 500;
 
-  box-shadow: 0 1px 5px rgba(0,0,0, 0.2);
+  border: 1px solid rgba(0,0,0, 0.2);
 }
 
 .quick-read-header {

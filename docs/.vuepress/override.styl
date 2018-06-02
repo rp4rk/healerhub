@@ -1,0 +1,79 @@
+main-bg-color = #232f3d;
+highlight = #008148;
+offwhite = #ecebf3;
+bright-highlight = #e5f77d; 
+error = #c20114;
+
+border-color = darken(main-bg-color, 40%);
+
+
+
+:root
+  --main-bg-color: main-bg-color;
+  --highlight: highlight;
+  --offwhite: offwhite;
+  --bright-highlight: bright-highlight;
+  --font-color: offwhite;
+  --error: error;
+
+body
+  background-color: var(--main-bg-color);
+  color: var(--offwhite) !important;
+
+  h1,h2,h3,h4,h5,h6
+    border-color: border-color;
+
+  a
+    color: var(--highlight);
+
+    &.sidebar-link
+      color: var(--offwhite);
+
+      &:hover
+        color: var(--bright-highlight);
+
+      &.active
+        color: var(--bright-highlight);
+        border-color: var(--bright-highlight);
+
+  hr
+    border-top: 1px solid border-color;
+
+  .search-box input
+    background-color: var(--main-bg-color);
+    border-color: border-color;
+    color: var(--offwhite);
+
+    &:focus
+      border-color: var(--bright-highlight)
+
+  .home .hero .action-button
+    background-color: var(--highlight);
+    border-color: lighten(highlight, 10%);
+
+    &:hover
+      background-color: lighten(highlight, 15%);
+
+  .custom-block.tip
+    background-color: darken(main-bg-color, 10%);
+    border-color: var(--highlight)
+
+  .navbar
+    background-color: var(--main-bg-color);
+    border-bottom: 1px solid border-color;
+
+    .site-name
+      color: var(--offwhite);
+
+  .sidebar
+    background-color: var(--main-bg-color);
+    border-right: 1px solid border-color;
+
+  .home .features
+    border-top: 1px solid border-color;
+
+  .home .footer
+    border-top: 1px solid border-color;
+
+  .page-nav.content .inner
+    border-top: 1px solid border-color;

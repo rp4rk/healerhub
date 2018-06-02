@@ -8,8 +8,8 @@
       <div v-bind:class="{ reverse: reverse }" v-for="(id, idx) in this.ids" class='talent-row-member'>
         
         <Talent :id=id :showDescription="correctPicks && correctPicks[idx] || !correctPicks"></Talent>
-        <CheckCircle v-if="correctPicks && correctPicks[idx] && showPickIcon" fillColor='#3eaf7c'></CheckCircle>
-        <AlertCircle v-if="correctPicks && !correctPicks[idx] && showPickIcon" fillColor='#c54732'></AlertCircle>
+        <CheckCircle v-if="correctPicks && correctPicks[idx] && showPickIcon" fillColor='var(--highlight)'></CheckCircle>
+        <AlertCircle v-if="correctPicks && !correctPicks[idx] && showPickIcon" fillColor='var(--error)'></AlertCircle>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ export default {
   .talent-row-tier {
     display: inline-block;
 
-    border: 3px solid #3eaf7c;;
+    border: 3px solid var(--highlight);
     padding: 15px;
     border-radius: 50%;
   }

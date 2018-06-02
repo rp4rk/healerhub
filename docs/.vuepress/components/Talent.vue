@@ -63,7 +63,7 @@ export default {
   display: inline-block;
   overflow: hidden;
 
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0,0,0, 0.2);
   width: 100%;
   min-height: 44px;
 
@@ -132,6 +132,7 @@ export default {
   display: flex;
   align-items: flex-start;
   position: relative;
+  overflow: hidden;
 }
 
 .talent .icon {
@@ -146,17 +147,16 @@ export default {
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   text-align: center;
   padding: 3px;
-  color: white;
+  color: var(--offwhite);
 }
 
 .talent main {
-  background-color: white;
+  background-color:rgba(255,255,255, 0.02);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 
   font-size: 0.8rem;
   font-style: italic;
@@ -164,7 +164,7 @@ export default {
 }
 
 .talent footer {
-  background-color: white;
+  background-color: var(--main-bg-color);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05); */
 }

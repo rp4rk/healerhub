@@ -1,7 +1,7 @@
 <template>
   <div class="loader" v-if="isLoading">
     <div class="loader-wrapper">
-      <scale-loader class="loader-widget" :loading="isLoading" color='#3AB982' :height="size || '24px'" width="2px"></scale-loader>
+      <scale-loader class="loader-widget" :loading="isLoading" color='var(--highlight)' :height="size || '24px'" width="2px"></scale-loader>
       <div v-if="!hideText" class="loading-text">Loading...</div>
     </div>
   </div>
@@ -23,7 +23,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  background-color: white;
+  background-color: var(--main-bg-color);
   z-index: 10;
 }
 
