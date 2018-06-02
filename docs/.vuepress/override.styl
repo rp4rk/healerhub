@@ -4,6 +4,8 @@ offwhite = #ecebf3;
 bright-highlight = #e5f77d; 
 error = #c20114;
 
+border-color = darken(main-bg-color, 40%);
+
 
 
 :root
@@ -19,7 +21,7 @@ body
   color: var(--offwhite) !important;
 
   h1,h2,h3,h4,h5,h6
-    border-color: darken(main-bg-color, 20%);
+    border-color: border-color;
 
   a
     color: var(--highlight);
@@ -35,11 +37,11 @@ body
         border-color: var(--bright-highlight);
 
   hr
-    border-top: 1px solid darken(main-bg-color, 20%);
+    border-top: 1px solid border-color;
 
   .search-box input
     background-color: var(--main-bg-color);
-    border-color: darken(main-bg-color, 20%);
+    border-color: border-color;
     color: var(--offwhite);
 
     &:focus
@@ -58,17 +60,20 @@ body
 
   .navbar
     background-color: var(--main-bg-color);
-    border-bottom: 1px solid darken(main-bg-color, 20%);
+    border-bottom: 1px solid border-color;
 
     .site-name
       color: var(--offwhite);
 
   .sidebar
     background-color: var(--main-bg-color);
-    border-right: 1px solid darken(main-bg-color, 20%);
+    border-right: 1px solid border-color;
 
   .home .features
-    border-top: 1px solid darken(main-bg-color, 20%);
+    border-top: 1px solid border-color;
 
   .home .footer
-    border-top: 1px solid darken(main-bg-color, 20%);
+    border-top: 1px solid border-color;
+
+  .page-nav.content .inner
+    border-top: 1px solid border-color;
