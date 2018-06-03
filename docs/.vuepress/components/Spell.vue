@@ -55,15 +55,14 @@ export default {
 .spell-inline {
   display: inline-block;
   position: relative;
-
-  background-color: rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   max-height: 26px;
   border-radius: 3px;
   padding-right: 8px;
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--bright-highlight);
 
-  min-width: 80px;
+  min-width: 60px;
 }
 
 .spell-inline:hover {
@@ -71,17 +70,20 @@ export default {
 }
 
 .spell-inline-image {
-  width: 26px;
-  height: 26px;
+  width: 16px;
+  height: 16px;
 
   border-radius: 3px 0 0 3px;
 
   display: inline-block;
   vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .spell-tooltip {
   background-color: var(--main-bg-color);
+  color: var(--offwhite);
   border: 1px solid rgba(0,0,0, 0.2);
   padding: 5px;
 
@@ -100,7 +102,7 @@ export default {
 
 .spell-tooltip-metadata {
   border-top: 1px solid rgba(0,0,0, 0.1);
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 5px;
   padding-top: 5px;
 }

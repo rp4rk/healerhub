@@ -1,5 +1,5 @@
 <template>
-  <div class="talent" @click="toggleDescription" v-bind:class="{ unfocused: !mutableShowDescription }">
+  <div class="talent" @click="toggleDescription" v-bind:class="{ unfocused: !mutableShowDescription && !alwaysActive }">
     <Loader :isLoading="isLoading"></Loader>
     <header v-if="!isLoading">
       <div class="background-image" :style="{ 'background-image': 'url(' + this.getImageURI() + ')'} "></div>
@@ -26,7 +26,7 @@ import loadingImage from '../public/img/question-mark.jpg';
 
 export default {
   extends: {
-    props: [...SpellComponent.props, 'showDescription', 'showMetadata'],
+    props: [...SpellComponent.props, 'alwaysActive', 'showDescription', 'showMetadata'],
 
     created: SpellComponent.created,
 
