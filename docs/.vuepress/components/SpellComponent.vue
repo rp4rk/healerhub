@@ -2,9 +2,10 @@
 import { http } from './util/cache';
 import { API_URL, IMAGE_URL } from './util/constants';
 import { castTime } from './util/spellMetaData';
+import getSpellId from './util/spells';
 
 export default {
-  props: ['id'],
+  props: ['id', 'spellName', 'spellClass'],
 
   // Fetches spell data
   created() {
@@ -22,10 +23,15 @@ export default {
     },
     // Fetches the spell data
     fetchSpellData() {
+      const id = this.id || getSpellId(this.spellName, this.spellClass);
       this.isLoading = true;
 
+      if (this.spellName === "Shadow Mend") {
+        console.log(id);
+      }
+
       http
-        .get(`${API_URL}/${this.id}`)
+        .get(`${API_URL}/${id}`)
         .then(({ data }) => {
           this.spells = this.spells.concat(data);
           this.currentSpell = this.spells[this.spells.length - 1];

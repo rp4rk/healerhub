@@ -19,12 +19,12 @@ amongst raid teams.
 
 
 ## Abilities of Note
-<Talent :alwaysActive=true id="34433"></Talent>
-<Talent :alwaysActive=true id="17"></Talent>
-<Talent :alwaysActive=true id="47536"></Talent>
-<Talent :alwaysActive=true id="62618"></Talent>
-<Talent :alwaysActive=true id="585"></Talent>
-<Talent :alwaysActive=true id="47540"></Talent>
+<Talent :alwaysActive=true spellName="Shadowfiend"></Talent>
+<Talent :alwaysActive=true spellName="Power Word: Shield"></Talent>
+<Talent :alwaysActive=true spellName="Rapture"></Talent>
+<Talent :alwaysActive=true spellName="Power Word: Barrier"></Talent>
+<Talent :alwaysActive=true spellName="Smite"></Talent>
+<Talent :alwaysActive=true spellName="Penance"></Talent>
 
 
 ## Strengths and Weaknesses
@@ -46,17 +46,17 @@ Atonement is the core mechanic of Discipline, Atonement is to Discipline Priest 
 druids. A running theme with the specialisation is that abilities which are outside of the Atonement
 interaction chain are not very good.
 
-Atonement is spread using a few abilities, <Spell id="17"></Spell>, <Spell id="186263"></Spell> and
-<Spell id="194509"></Spell>. Usually the former will handle application in most cases, but in the
+Atonement is spread using a few abilities, <Spell spellName="Power Word: Shield"></Spell>, <Spell spellName="Shadow Mend"></Spell> and
+<Spell spellName="Power Word: Radiance"></Spell>. Usually the former will handle application in most cases, but in the
 case where you need lots of Atonement fast, Power Word: Radiance is there.
 
 
 #### Core Damaging Abilities
 Outside of the Atonement spreading abilities, you have a core set of offensive spells that build upon
 those,
-* <Spell id="47750"></Spell> - Cast on cooldown with Atonement spread.
-* <Spell id="589"></Spell> - Juggle this as many enemies as you can.
-* <Spell id="585"></Spell> - Hit this as much as you can if all else is done.
+* <Spell spellName="Penance"></Spell> - Cast on cooldown with Atonement spread.
+* <Spell spellName="Shadow Word: Pain"></Spell> - Juggle this as many enemies as you can.
+* <Spell spellName="Smite"></Spell> - Hit this as much as you can if all else is done.
 
 Note that Shadow Word: Pain can quickly become a burden to keep up on many enemies. Do not compromise
 your Atonement count to spread this. Afterall, no Atonement means no healing from damage, a balance
@@ -65,7 +65,7 @@ will be the best for your output in most situations.
 
 #### Do Not Cast Holy Nova
 Discipline currently has a huge "noob trap", so to make things explicitly clear this gets a section.
-<Spell id="132157"></Spell> is never, ever worth casting in any PvE scenario. Unbind this ability and save
+<Spell spellName="Holy Nova"></Spell> is never, ever worth casting in any PvE scenario. Unbind this ability and save
 yourself the cognitive burden of having to consider it as a choice. It doesn't provide meaningful atonement
 value, it doesn't heal for much either, and it costs too much to use in moments with no Atonement.
 
@@ -73,7 +73,7 @@ value, it doesn't heal for much either, and it costs too much to use in moments 
 As you increase in player count, ramping becomes more and more valuable as a skill to practice. Ramping
 essentially refers to the player starting to spread Atonement in order to counter a burst of incoming
 damage as soon as it happens. Discipline has a number of talents that encourage this playstyle, not
-limited to <Spell id="214621"></Spell>, and <Spell id="246287"></Spell>.
+limited to <Spell spellName="Schism"></Spell>, and <Spell spellName="Evangelism"></Spell>.
 
 <img :src="$withBase('/img/wheelchair-ramping.jpg')" />
 
@@ -84,7 +84,7 @@ Discipline, being a spec built around a dichotomy between damage and healing, ha
 each affinity.
 
 #### Shadowfiend
-Combined with the potential provided by [ramping](#ramping), <Spell id="34433"></Spell> provides a huge
+Combined with the potential provided by [ramping](#ramping), <Spell spellName="Shadowfiend"></Spell> provides a huge
 amount of extra damage that will give an exceptional boost to your healing. This is a much more skill
 oriented ability than it seems, as a large amount of Atonement is required to make it effective.
 
@@ -96,17 +96,17 @@ making use of this due to stacking limitations, try the Luminous Barrier talent.
 
 ### Talent Build - Generic
 <div class="talent-build">
-  <SpellBox id="193134" label="Tier 15"></SpellBox>
-  <SpellBox id="121536" label="Tier 30"></SpellBox>
-  <SpellBox id="197045" label="Tier 45"></SpellBox>
-  <SpellBox id="204263" label="Tier 60"></SpellBox>
-  <SpellBox id="280391" label="Tier 75"></SpellBox>
-  <SpellBox id="204197" label="Tier 90"></SpellBox>
-  <SpellBox id="238063" label="Tier 100"></SpellBox>
+  <SpellBox spellName="Castigation" label="Tier 15"></SpellBox>
+  <SpellBox spellName="Angelic Feather" label="Tier 30"></SpellBox>
+  <SpellBox spellName="Shield Discipline" label="Tier 45"></SpellBox>
+  <SpellBox spellName="Shining Force" label="Tier 60"></SpellBox>
+  <SpellBox spellName="Sins of the Many" label="Tier 75"></SpellBox>
+  <SpellBox spellName="Purge the Wicked" label="Tier 90"></SpellBox>
+  <SpellBox spellName="Lenience" label="Tier 100"></SpellBox>
 </div>
 
 This build focuses on providing the most value and having the least active buttons, the offensive
-capabilities are mediocre however it reduces your active buttons to mainly consisting of <Spell id="17"></Spell>,
- <Spell id="204197"></Spell>, and <Spell id="585"></Spell>. The playstyle
+capabilities are mediocre however it reduces your active buttons to mainly consisting of <Spell spellName="Power Word: Shield"></Spell>,
+ <Spell spellName="Purge the Wicked"></Spell>, and <Spell spellName="Smite"></Spell>. The playstyle
 here is mainly reactionary, with a focus on keeping as many Purge the Wicked debuffs up as you can whilst
 keeping a healthy number of Atonements active.

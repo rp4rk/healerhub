@@ -14,7 +14,7 @@ export default {
   Smite: 262861,
   'Holy Nova': 132157,
   Levitate: 1706,
-  'Shadow Mend': 186440,
+  'Shadow Mend': 186263,
   'Desperate Prayer': 19236,
   Plea: 200829,
   Purify: 527,

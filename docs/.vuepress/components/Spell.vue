@@ -9,7 +9,7 @@
 
       <footer class='spell-tooltip-metadata'>
         {{ this.getCastTime() }} cast, 
-        {{ this.currentSpell.Range.MaxEnemies }} yard range
+        {{ this.currentSpell.range && this.currentSpell.Range.MaxEnemies }} yard range
       </footer>
     </div>
   </span>

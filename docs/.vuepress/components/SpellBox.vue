@@ -6,14 +6,6 @@
       <div class="spellbox-name">{{ this.currentSpell.Name }}</div>
     </div>
     <div class="spellbox-label">{{ label }}</div>
-    <div v-if="!isLoading" v-show="this.showTooltip" class="spell-tooltip">
-      {{ this.currentSpell.AuraDescriptionParsed }}
-
-      <footer class='spell-tooltip-metadata'>
-        {{ this.getCastTime() }} cast, 
-        {{ this.currentSpell.Range.MaxEnemies }} yard range
-      </footer>
-    </div>
   </div>
 </template>
 
