@@ -35,8 +35,7 @@ where Contrition is strong, but Twist of Fate won't proc.
 
 </SkillSpan>
 
-
-<TalentRow :showPickIcon=true :tier=30 :ids="[121536, 64129, 193063]" :correctPicks="[1, 0, 0]" :reverse=true></TalentRow>
+<TalentRow :showPickIcon=true :tier=30 :spellNames="['Angelic Feather', 'Body and Soul', 'Masochism']" :correctPicks="[1, 0, 0]" :reverse=true></TalentRow>
 
 <hr />
 
@@ -56,13 +55,14 @@ cast the Angelic Feather on you!
 /stopspelltarget
 /cast [talent:2/3, @player] Shadow Mend
 ```
+
 :::
 
 <hr />
 
 </SkillSpan>
 
-<TalentRow :showPickIcon=true :tier=45 :ids="[129250, 197045, 123040]" :correctPicks="[1, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=45 :spellNames="['Power Word: Solace', 'Shield Discipline', 'Mindbender']" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
 
@@ -85,7 +85,7 @@ healing in minute intervals, meaning mana expenditure between ramps will not be 
 
 </SkillSpan>
 
-<TalentRow :showPickIcon=true :tier=60 :ids="[196704, 204263, 205367]" :correctPicks="[0, 1, 0]" reverse=true></TalentRow>
+<TalentRow :showPickIcon=true :tier=60 :spellName="['Psychic Voice', 'Shining Force', 'Dominant Mind']" :correctPicks="[0, 1, 0]" reverse=true></TalentRow>
 
 <hr />
 
@@ -97,7 +97,58 @@ When was the last time you cast Psychic Scream or Mind Control? Thought so - tak
 
 </SkillSpan>
 
-<TalentRow :showPickIcon=true :tier=75 :ids="[238063, 271531, 197419]" :correctPicks="[1, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=75 :ids="['Sins of the Many', 'Contrition', 'Shadow Covenant']" :correctPicks="[1, 1, 0]"></TalentRow>
+
+<hr />
+
+<SkillSpan level="normal">
+
+Sins of the Many is a very strong for small group formats, giving a baseline 12% damage
+bonus to the player and degrading by 1% for each Atonement. The floor for this effect
+is 3%, so even with 20 Atonements out you will be doing a minimum of 3% more damage.
+
+Contrition is a strong pick when you need to do strong spot healing and Atonement healing
+at the same time. It is difficult to tell how much healing is provided by this talent,
+but if you are raiding we have a module in the [WoWAnalyzer](www.wowanalyzer.com) Discipline
+analyzer!
+
+Note that Contrition is a significantly _weaker_ healing effect on your Atonements than a
+regular offensive Penance would be. However, you do gain the very strong single target spot
+healing that Penance provides. By using Contrition you do lose a lot of offensive synergy with
+<Spell spellName="Purge the Wicked"></Spell> and <Spell spellName="Schism"></Spell>.
+
+Under no circumstances is it acceptable to take Shadow Covenant, the healing is far too weak
+and far too expensive to use even in a mythic plus context.
+
+<hr />
+
+</SkillSpan>
+
+<TalentRow :showPickIcon=true :tier=90 :spellNames="['Purge the Wicked', 'Divine Star', 'Halo']" :correctPicks="[1, 1, 1]" reverse=true></TalentRow>
+
+<hr />
+
+<SkillSpan level="normal">
+
+Purge the Wicked is still very strong in contexts where the DoT can spread from use
+of Penance. Thanks to a _huge_ buff to Halo and Divine Star however, this is no
+longer an obvious pick on fights where this doesn't happen often, or not at all.
+
+Divine Star is very strong in stack situations when the healing can be made use of every 15s.
+Interestingly the Atonement component of Divine Star is very minor, meaning that there's no
+pressure to have a lot of Atonement out whilst casting it. It will do a significant amount more
+healing than Halo if you can manage it right. The downside is that the cost is
+very high, and that the position requirements are strict.
+
+Halo is a big boy now, arguably the default choice for raiders on single target fights.
+It deals a huge amount of damage, and also does a huge amount of raw healing that _is_
+buffed by <Spell spellName="Mastery: Grace"></Spell>.
+
+<hr />
+
+</SkillSpan>
+
+<TalentRow :showPickIcon=true :tier=100 :spellNames="['Lenience', 'Luminous Barrier', 'Evangelism']" :correctPicks="[1, 1, 1]"></TalentRow>
 
 <hr />
 
@@ -108,59 +159,11 @@ having trouble judging how strong, remember that [WoWAnalyzer](www.wowanalyzer.c
 it does. Typically, if the fight follows an archetype where people are taking huge amounts of damage, consistently,
 Lenience is your choice.
 
-Orison is a strong pick for the situations that Lenience and Contrition don't work well. Don't fall into the trap
-of thinking this synergises well with Shield Discipline though - Orison just makes Power Word: Shield into a
-cheaper Shadow Mend. Thanks to Atonement opportunity cost, it is never worth spamming Power Word: Shield.
+Luminous Barrier replaces Power Word: Barrier, but gives you a massive absorb shield instead. This _seems_ good but
+you will be able to squeeze more value out of having Barrier and Evangelism. **Taking this in anything other than a raid is a mistake.** If you cannot make Power Word: Barrier work, or you have trouble utilising it, Luminous Barrier
+may be a good pick.
 
-Contrition is a strong pick when you need to do strong spot healing and strong Atonement healing at the same time,
-the AoE effect is just as strong as an offensive Penance. This talent has the potential for monstrous numbers, but
-at the same time it excludes you from several beneficial effects, such as:
-* Power of the Dark Side
-* Purge the Wicked Synergy
-* Schism synergy
-* Having a nice amount of DPS
-
-Your group healing will likely be weaker with this talent than without *on average*, but the ability to heal the tank
-and the group at the same time is amazingly strong in the right conditions.
-
-<hr />
-
-</SkillSpan>
-
-<TalentRow :showPickIcon=true :tier=90 :ids="[204197, 110744, 120517]" :correctPicks="[1, 1, 1]" reverse=true></TalentRow>
-
-<hr />
-
-<SkillSpan level="normal">
-
-Purge the Wicked is still very strong, but no longer reigns as king in situations where you cannot benefit from the spread.
-If you can reliably spread this, it contains an amazing amount of value that will be hard for Divine Star or Halo to beat.
-
-Divine Star is very strong in stack situations when the healing can be made use of every 15s. Interestingly the Atonement
-component of Divine Star is very minor, meaning that there's no pressure to have a lot of Atonement out whilst casting it. It
-will do a significant amount more healing than Halo if you can manage it right.
-
-Halo is a big boy now, arguably the default choice for raiders on single target fights. It deals a huge amount of damage, and
-also does a huge amount of raw healing that *is* buffed by Reverence.
-
-<hr />
-
-</SkillSpan>
-
-<TalentRow :showPickIcon=true :tier=100 :ids="[271466, 200309, 246287]" :correctPicks="[1, 1, 1]"></TalentRow>
-
-<hr />
-
-<SkillSpan level="normal">
-
-Luminous Barrier replaces Power Word: Barrier, but gives you a massive absorb shield instead. This seems good but you will be
-able to squeeze more value out of having Barrier and Evangelism. Taking this in anything other than a raid is a mistake. If
-you cannot make Power Word: Barrier work, or you have trouble utilising it, Luminous Barrier may be a good pick.
-
-Grace is good for dungeons and maybe some fights where spot healing is at a premium. Note that **grace does not buff Contrition!**
-
-Evangelism is a standard pick, the ability to extend your Atonements and cast more of your cooldowns into them counters
-a lot of intense healing phases. This cooldown is a little weaker now that we no longer have access to Velen's.
+Evangelism is a good pick on fights where you need an extended burst window for Atonement, the ability to extend your Atonements and cast more of your cooldowns into them counters a lot of intense healing phases.
 
 </SkillSpan>
 
