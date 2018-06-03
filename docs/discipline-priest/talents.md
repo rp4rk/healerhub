@@ -13,7 +13,7 @@ some recommendations on which abilities to choose.
 
 ## Talent Recommendations
 
-<TalentRow :showPickIcon=true :tier=15 :ids="[193134, 265259, 214621]" :correctPicks="[0, 1, 1]"></TalentRow>
+<TalentRow :showPickIcon=true :tier=15 :spellNames="['Castigation', 'Twist of Fate', 'Schism']" :correctPicks="[0, 1, 1]"></TalentRow>
 
 <hr />
 

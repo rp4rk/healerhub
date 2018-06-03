@@ -5,9 +5,14 @@
       <h3 class="talent-row-tier">{{this.tier}}</h3>
     </div>
     <div class="talent-row-spells">
-      <div v-bind:class="{ reverse: reverse }" v-for="(id, idx) in this.ids" class='talent-row-member'>
+      <div v-bind:class="{ reverse: reverse }" v-for="(id, idx) in spellIdentifiers" class='talent-row-member'>
         
-        <Talent :id=id :showDescription="correctPicks && correctPicks[idx] || !correctPicks"></Talent>
+        <Talent 
+          :id="identifierType === 'spellId' ? id : undefined" 
+          :spellName="identifierType === 'spellName' ? id : undefined"
+          :spellClass=spellClass
+          :showDescription="correctPicks && correctPicks[idx] || !correctPicks">
+        </Talent>
         <CheckCircle v-if="correctPicks && correctPicks[idx] && showPickIcon" fillColor='var(--highlight)'></CheckCircle>
         <AlertCircle v-if="correctPicks && !correctPicks[idx] && showPickIcon" fillColor='var(--error)'></AlertCircle>
       </div>
@@ -17,7 +22,16 @@
 
 <script>
 export default {
-  props: ['ids', 'tier', 'correctPicks', 'showPickIcon', 'reverse'],
+  props: ['ids', 'spellNames', 'spellClass', 'tier', 'correctPicks', 'showPickIcon', 'reverse'],
+
+  computed: {
+    spellIdentifiers() {
+      return this.ids || this.spellNames;
+    },
+    identifierType() {
+      return this.ids ? 'spellId' : 'spellName';
+    }
+  },
 };
 </script>
 
