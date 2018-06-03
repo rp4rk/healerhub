@@ -3,7 +3,7 @@ title: Discipline Priest Basics
 lang: en-US
 ---
 
-<progressive-img class="class-logo" :src="$withBase('/img/priest-logo.png')" />
+<img class="class-logo" :src="$withBase('/img/priest-logo.png')" />
 
 # How Does Discipline Play?
 
@@ -75,7 +75,8 @@ essentially refers to the player starting to spread Atonement in order to counte
 damage as soon as it happens. Discipline has a number of talents that encourage this playstyle, not
 limited to <Spell id="214621"></Spell>, and <Spell id="246287"></Spell>.
 
-<progressive-img :src="$withBase('/img/wheelchair-ramping.jpg')" />
+<img :src="$withBase('/img/wheelchair-ramping.jpg')" />
+
 [Source](http://www.nataliedee.com/index.php?date=041407)
 
 #### Raid Cooldowns

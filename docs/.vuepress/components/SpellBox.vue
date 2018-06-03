@@ -43,6 +43,7 @@ export default {
 
 <style>
   .spellbox-inline {
+    position: relative;
     margin-top: 15px;
     display: inline-flex;
 
