@@ -1,4 +1,5 @@
 import ScaleLoader from '../../node_modules/vue-spinner/src/ScaleLoader.vue';
+import VueProgressiveImage from '../../node_modules/vue-progressive-image/dist/vue-progressive-image';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -7,4 +8,5 @@ export default ({
   siteData // site metadata
 }) => {
   Vue.component('scale-loader', ScaleLoader);
+  Vue.use(VueProgressiveImage);
 };
